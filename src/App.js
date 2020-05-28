@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import "./App.css";
 import axios from "axios";
+import NavBar from "./components/navBar"
 import InfoCard from "./components/infoCard";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
 
   return (
     <div className="App">
+    	<NavBar date={data.date} />
     	<InfoCard data={data} />
     </div>
   );

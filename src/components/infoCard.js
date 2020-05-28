@@ -1,4 +1,5 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
+import "./infoCard.css";
 
 function InfoCard(props){
 
@@ -6,13 +7,12 @@ function InfoCard(props){
 		<div className="infoCard">
 			<h1>{props.data.title}</h1>
 			<h3>{props.data.date}</h3>
-			<div>
+			<div className="imgDiv">
 				<img src={props.data.hdurl} />
 			</div>
 
 			<p>{props.data.explanation}</p>
 		</div>
-		
 	);
 
 }
