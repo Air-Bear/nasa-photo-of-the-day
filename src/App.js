@@ -21,7 +21,7 @@ function App() {
 
   return (
     <div className="App">
-    	<NavBar date={data.date} />
+    	<NavBar date={data.date} setQuery={setQuery}/>
     	<InfoCard data={data} />
     </div>
   );
