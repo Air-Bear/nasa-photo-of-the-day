@@ -17,11 +17,26 @@ function NavBar(props){
 
 	return(
 		<nav>
-			<select name="dates" onChange={e => console.log("&date=" + e.target.value.toISOString())} >
+			<select name="dates" onChange={e => console.log("&date=" + dateFormatting(e.target.value))} >
 				{dateArr.map(date => <Option date={date} />)}
 			</select>
 		</nav>
 	);
+}
+
+function dateFormatting(date){
+	// var arr = date.split("/"); //original solution, not DRY
+	// var year = arr[2];
+	// var month = arr[0];
+	// var day = arr[1];
+	// var arr2 = year+"-"+month+"-"+day;
+
+	// return arr2;
+
+	var arr = date.split("/");
+	arr.unshift(arr.pop());
+
+	return arr.join("-");
 }
 
 export default NavBar;
