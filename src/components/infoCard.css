@@ -1,0 +1,12 @@
+.infoCard{
+	border: 1px solid grey;
+	margin: 5% 15%;
+}
+
+.imgDiv img{
+	max-width: 75%;
+}
+
+p{
+	margin: 5%;
+}
